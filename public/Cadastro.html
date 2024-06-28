@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <!--style-->
+    <link rel="stylesheet" href="css/CadastroStyles.css">
+</head>
+<body>
+    <!--Logo-->
+    <div id="divBlue">
+        <div id="divImg">
+            <img id="img" src="img/logo.jpeg" alt="logo da barbearia">
+        </div>  
+    </div>
+    <!--Formualrio Usuario-->
+    <div id="divCenter">
+        <h2 class="title ">Cadastro Usuario</h2>
+        <!--Register-->
+        <div id="divRegister">
+            <div id="divForm">
+                <form id="registerForm">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome">
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" id="sobrenome" name="sobrenome">
+                    <label for="email">E-mail:</label>
+                    <input type="text" id="email" name="email">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha">
+                    <label for="senhaConf">Confirmação da senha</label>
+                    <input type="password" id="senhaConf" name="senhaConf">
+                </form> 
+            </div>
+            <div id="btnUser">
+                <button id="submitUser">Cadastrar</button>
+            </div>
+        </div>
+        <!--Return-->
+        <div id="btnReturn">
+            <a href="index.html">Voltar</a>
+        </div>
+    </div>
+    <!--Baseboard-->
+    <footer>
+        <p>&copy; 2024 Todos os direitos William dias.</p>
+    </footer>
+    <!--Script-->
+    <script src="js/api.js"></script>
+</body>
+</html>
