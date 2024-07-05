@@ -1,11 +1,11 @@
 # Tela de login Com nodeJS
 
-# Descrição
+## Descrição
 Este código é um exemplo simplificado de uma tela de login usando Node.js.
 O código pode ser melhorado em várias áreas,
-como a criptografia da senha antes de salvar no banco de dados e a implementação de um validador de sessão mais elaborado.
+como a criptografia da senha antes de enviar para o servidor, a verificação se já existe um usuário com o mesmo nome ou e-mail e uma verificação de duas etapas.
 
-# Bibliotecas Utilizadas
+## Bibliotecas Utilizadas
 express: Framework web rápido e minimalista para Node.js.
 
 express-session: Middleware para gerenciar sessões de usuários no Express.
@@ -18,10 +18,10 @@ path: Módulo nativo do Node.js para manipulação de caminhos de arquivos e dir
 
 sqlite3: Biblioteca para interagir com bancos de dados SQLite.
 
-# Instalação
+## Instalação
 npm install express express-session body-parser bcryptjs path sqlite3
 
-#Uso
+## Uso
 1. Clone o repositório para a sua máquina local.
 
 2. Navegue até o diretório do projeto.
