@@ -6,6 +6,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     // Atribui os valores dos campos de entrada 'email' e 'senha' às variáveis correspondentes
     const email = document.getElementById("email").value;
     const senha = document.getElementById("senha").value;
+    const opt = 'cliente';
 
     // Verifica se ambos os campos foram preenchidos. Se não, exibe um alerta e interrompe a execução
     if (!email || !senha) {
@@ -19,6 +20,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         body: JSON.stringify({
             email: email,
             senha: senha,
+            opt: opt
         }),
         headers: {
             "Content-Type": "application/json",

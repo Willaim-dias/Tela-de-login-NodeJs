@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Area Usuario</title>
-
 </head>
+
 <body>
     <h1>Logado com Sucesso!</h1>
+    <button id="exit">Voltar</button>
 </body>
+<!--script-->
+<script>
+    // Captura do evento de click do botão com ID 'exit'
+    document.getElementById('exit').addEventListener('click', exit);
+
+    // Função para encerrar a sessão
+    function exit() {
+        fetch("/logout", { // Faz uma solicitação POST para a rota de logout
+            method: "POST",
+        })
+            .then(response => {
+                // Verifica se a resposta da solicitação foi bem-sucedida (status 200-299)
+                if (!response.ok) {
+                    throw new Error(`Erro na solicitação: ${response.status}`);
+                }
+                return response.text(); // Converte a resposta em texto
+            })
+            .then(() => {
+                // Redireciona o usuário para a página de login após a sessão ser encerrada
+                window.location.href = '/Login.html';
+            })
+            .catch(error => {
+                // Captura e loga qualquer erro que tenha ocorrido durante a solicitação ou processamento da resposta
+                console.error('Erro:', error);
+            });
+    }
+</script>
+
 </html>
